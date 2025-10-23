@@ -32,12 +32,9 @@ namespace QuizGame
         {
             Button button = sender as Button;
             int selectedIndex = int.Parse(button.Tag.ToString());
-            ViewModel.SelectedAnswerIndex = selectedIndex;
+            ViewModel.NextQuestion(selectedIndex);
         }
 
-        public void NextQuestion_Click(Object sender, RoutedEventArgs e)
-        {
-            ViewModel.NextQuestion();
-        }
+        
     }
 }
